@@ -1,0 +1,4 @@
+Kernel Samepage Merging tools
+-----------------------------
+
+madv_ksm.c - LD_PRELOAD library that hooks mmap, mmap2, mremap, realloc, calloc and malloc. Marks full page as MADV_MERGEABLE
