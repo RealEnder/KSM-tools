@@ -52,7 +52,7 @@ void *(*real_malloc)  (size_t) = __libc_malloc;
 
 //init 
 void hook_init() {
-    kernel_pagesize = sysconf(_SC_PAGESIZE);
+    kernel_pagesize = (size_t) sysconf(_SC_PAGESIZE);
 
     real_mmap = dlsym(RTLD_NEXT, "mmap");
     real_mmap2 = dlsym(RTLD_NEXT, "mmap2");
